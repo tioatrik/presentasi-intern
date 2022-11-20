@@ -362,27 +362,19 @@ h6 {
   font-size: 24px;
 }
 
-#hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 30px;
-  border-radius: 50px;
-  transition: 0.5s;
-  color: #3498db;
-  border: 2px solid #3498db;
+.hero-img img{
+  width:400px !important; 
+   
 }
-
-#hero .btn-get-started:hover {
-  background: #3498db;
-  color: #fff;
+.hero-img{
+  padding-left:100px !important;
+  padding-bottom:200px !important;
 }
 
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
+
 
 @media (min-width: 1024px) {
   #hero {
@@ -405,13 +397,17 @@ h6 {
   }
 
   #hero .hero-img img {
-    width: 50%;
+    width: 20%;
   }
 }
 
 @media (max-width: 768px) {
-  #hero {
-    margin-top: 20px;
+  .hero-img{
+    height: 10px !important;
+    position:absolute;
+    top:0px;
+    z-index:-1;
+
   }
 
   #hero h1 {
@@ -423,6 +419,7 @@ h6 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+    font-weight:600;
   }
 
   #hero .hero-img img {
@@ -1571,4 +1568,97 @@ section {
 
 #footer .footer-links a:hover {
   color: #3498db;
+}
+
+/*--------------------------------------------------------------
+# Call To Action Section
+--------------------------------------------------------------*/
+.cta {
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+.cta .container {
+  padding: 80px;
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  border-radius: 15px;
+}
+
+@media (max-width: 992px) {
+  .cta .container {
+    padding: 60px;
+  }
+}
+
+.cta .content h3 {
+  color: black;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.cta .content h3 em {
+  font-style: normal;
+  position: relative;
+}
+
+.cta .content h3 em:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  height: 10px;
+  background: rgba(var(--color-primary-rgb), 0.5);
+  z-index: -1;
+}
+
+.cta .content p {
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.cta .content .cta-btn {
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 16px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 5px;
+  transition: 0.5s;
+  margin-top: 10px;
+  background: rgba(var(--color-primary-dark-rgb), 0.9);
+}
+
+.cta .content .cta-btn:hover {
+  background: var(--color-primary);
+}
+
+.cta .img {
+  position: relative;
+}
+
+.cta .img:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(var(--color-white-rgb), 0.5);
+  border-radius: 15px;
+  transform: rotate(12deg);
+}
+
+.cta .img:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(var(--color-white-rgb), 0.9);
+  border-radius: 15px;
+  transform: rotate(6deg);
+}
+
+.cta .img img {
+  position: relative;
+  z-index: 3;
+  border-radius: 15px;
 }
